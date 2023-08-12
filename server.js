@@ -10,10 +10,11 @@ const cookieParser = require('cookie-parser');
 connectToMongo();
 
 const app = express();
-app.use(cors({
-  origin: 'https://vibe-hub-frontend-dhananjay929.vercel.app/', // Replace with the actual origin of your frontend
-  credentials: true, // Allow cookies and other credentials to be sent
-}));
+app.use(cors());
+// {
+//   origin: 'https://vibe-hub-frontend-dhananjay929.vercel.app/', // Replace with the actual origin of your frontend
+//   credentials: true, // Allow cookies and other credentials to be sent
+// }
 const PORT= config.PORT ;
 
 app.use(express.json());
