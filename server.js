@@ -11,7 +11,7 @@ connectToMongo();
 
 const app = express();
 app.use(cors({
-  origin: 'http://localhost:3000', // Replace with the actual origin of your frontend
+  origin: 'https://vibe-hub-frontend-dhananjay929.vercel.app/', // Replace with the actual origin of your frontend
   credentials: true, // Allow cookies and other credentials to be sent
 }));
 const PORT= config.PORT ;
@@ -34,7 +34,5 @@ app.use(cookieParser());
     //      res.status(500).send('Something went wrong!');
     //    });
        
-       app.listen(PORT, () => {
-         console.log(`Server is running at port no.  http://localhost:${PORT}`);
-       });
+       app.listen(PORT);
        
