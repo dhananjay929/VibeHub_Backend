@@ -11,7 +11,7 @@ connectToMongo();
 
 const app = express();
 app.use(cors({
-  origin: 'https://vibe-hub-frontend.vercel.app/', // Replace with the actual origin of your frontend
+  origin: '*', // Replace with the actual origin of your frontend
   credentials: true, // Allow cookies and other credentials to be sent
 }));
 const PORT= config.PORT ;
