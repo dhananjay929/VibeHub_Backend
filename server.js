@@ -16,8 +16,8 @@ app.use(
       "https://vibe-hub-frontend.vercel.app/write",
       "https://vibe-hub-frontend.vercel.app/about",
       "https://vibe-hub-frontend.vercel.app/home"
-    ], // Replace with the actual origin of your frontend
-    credentials: true, // Allow cookies and other credentials to be sent
+    ],                                                          // Replace with the actual origin of your frontend
+    credentials: true,                                                 // Allow cookies and other credentials to be sent
   })
 );
 const PORT = config.PORT;
