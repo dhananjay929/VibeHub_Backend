@@ -12,7 +12,6 @@ app.use(
   cors({
     origin: [
       "https://vibe-hub-frontend.vercel.app",
-      "https://vibe-hub-frontend.vercel.app/",
       "https://vibe-hub-frontend.vercel.app/login",
       "https://vibe-hub-frontend.vercel.app/write",
       "https://vibe-hub-frontend.vercel.app/about",
