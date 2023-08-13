@@ -4,7 +4,7 @@ const {check, validationResult } = require('express-validator')
 const User = require("../models/user.js");
 const bcrypt = require('bcrypt');
 
-router.get("/api",(req,res)=>{
+router.get("/",(req,res)=>{
   res.send("Hello Everryone, Welcome to the server of VibeHub")
 })
 router.post("/signup", [
