@@ -4,9 +4,9 @@ const {check, validationResult } = require('express-validator')
 const User = require("../models/user.js");
 const bcrypt = require('bcrypt');
 
-// router.get("/api",(req,res)=>{
-//   res.send("Hello Everryone")
-// })
+router.get("/api",(req,res)=>{
+  res.send("Hello Everryone, Welcome to the server of VibeHub")
+})
 router.post("/signup", [
     // Validate and sanitize fields using express-validator
     check('name').notEmpty().withMessage('Name is required'),
@@ -20,14 +20,9 @@ router.post("/signup", [
       return res.status(400).json({ errors: errorMessages });
     }
     try {
-        
-      // const name = req.body.name;
-      // const email = req.body.email;
+      
       const password = req.body.password;
       
-      // console.log("dj and harshit");
-      // if (!name || !email || !password) {
-      //     return res.status(400).json({ error: 'Invalid input. Please provide name, email, and password.' });}
     
        const existingUser = await User.findOne({ email:req.body.email });
        if (existingUser) {

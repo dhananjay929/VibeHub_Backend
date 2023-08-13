@@ -52,12 +52,7 @@ router.post(
       };
       const authtoken = jwt.sign(data, JWT_SECRET);
 
-      // res.setCookie('Set-Cookie', cookie.serialize('authtoken', authtoken, {
-      //   httpOnly: true,
-      //   maxAge: 3600, // 1 hour in seconds
-      //   path: '/', // Set the cookie path
-      // }));
-      
+     
       return res.cookie('authtoken', authtoken, { secure: false,httpOnly: false }).status(200).json({ message: 'Login successful' });
       // console.log(res.cookie)      
 
