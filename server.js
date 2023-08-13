@@ -25,6 +25,17 @@ const PORT = config.PORT;
 app.use(express.json());
 app.use(cookieParser());
 
+// Set the SameSite attribute to "None" and "Secure" for cross-site contexts over HTTPS
+// app.use((req, res, next) => {
+//   res.cookie("authtoken", "your-token-value", {
+//        // Set to "None" for cross-site contexts
+//     secure: true,        // Set for HTTPS
+//     httpOnly: true       // Recommended for security
+//   });
+//   next();
+// });
+
+
 //Available routes
 app.use("/api", require("./routes/signup"));
 app.use("/api", require("./routes/login"));

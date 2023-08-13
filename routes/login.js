@@ -53,7 +53,7 @@ router.post(
       const authtoken = jwt.sign(data, JWT_SECRET);
 
      
-      return res.cookie('authtoken', authtoken, { secure: false,httpOnly: false }).status(200).json({ message: 'Login successful' });
+      return res.cookie('authtoken', authtoken, { sameSite:"None",secure: false,httpOnly: false }).status(200).json({ message: 'Login successful' });
       // console.log(res.cookie)      
 
     } catch (error) {
